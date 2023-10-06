@@ -1,0 +1,6 @@
+.container > .left-container > .login-container > form > label {
+    font-family: Poppins;
+    font-weight: 500;
+    color: #FFF7DC;
+    padding-bottom: 12px;
+}

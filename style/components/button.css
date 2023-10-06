@@ -1,0 +1,22 @@
+/* botão */
+button {
+    all: initial;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 12px 24px;
+    color: #03310D;
+    background-color: #41A55B;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2b8442;
+}

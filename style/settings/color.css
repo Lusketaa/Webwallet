@@ -1,0 +1,19 @@
+:root{
+    /* Gradiente Título */
+    --color-linear-gradient-title: linear-gradient(180deg, #D64545 0%, #F8D9B7 100%);
+    
+    /* Fundo */
+    --color-white: #FFFFFF; 
+
+    /* Preto */
+    --color-black: #000000; 
+
+    /* Cor da escrita */
+    --color-gray: #616161; 
+
+    /* Verde */
+    --color-green: #2A5917; 
+
+    /* danger */
+    --color-danger: #FF2222;
+}
