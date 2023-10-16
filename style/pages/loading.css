@@ -1,0 +1,49 @@
+/* Loading*/
+.loading {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 200px;
+    width: 100%;
+    height: 100%;
+    background-color: #1A1919;
+}
+
+.loading > .gif {
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+
+.loading > .gif > .pig-gif {
+    width: 200px;
+    height: 200px;
+}
+
+.loading > .animation-bar {
+    width: 200px;
+    height: 2px;
+    background: #cfcfcf;
+    margin-top: 22px;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+}
+
+.loading > .animation-bar::before {
+    content: "";
+    width: 75px;
+    height: 2px;
+    position: absolute;
+    left: -34px;
+    animation: animation 1.5s infinite ease;
+    background: #41A55B;
+}
+
+@keyframes animation {
+    50% {
+        left: 135px;
+    }
+}

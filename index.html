@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebWallet</title>
+    <title>Login - WebWallet</title>
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,42 +16,62 @@
     <!-- STYLES ITCSS -->
 
     <!-- SETTINGS -->
-    <link rel="stylesheet" href="style/settings/color.css">
-    <link rel="stylesheet" href="style/settings/text.css">
+    <link rel="stylesheet" href="/style/settings/color.css">
+    <link rel="stylesheet" href="/style/settings/text.css">
 
     <!-- GENERIC -->
-    <link rel="stylesheet" href="style/generic/reset.css"> 
-    <link rel="stylesheet" href="style/generic/box-sizing.css">
+    <link rel="stylesheet" href="/style/generic/reset.css"> 
+    <link rel="stylesheet" href="/style/generic/box-sizing.css">
 
     <!-- BASE -->
-    <link rel="stylesheet" href="style/base/html.css">
+    <link rel="stylesheet" href="/style/base/html.css">
 
     <!-- OBJECTS -->
 
     <!-- COMPONENTS -->
-    <link rel="stylesheet" href="style/components/label.css">
-    <link rel="stylesheet" href="style/components/checkbox.css">
-    <link rel="stylesheet" href="style/components/button.css">
+    <link rel="stylesheet" href="/style/components/label.css">
+    <link rel="stylesheet" href="/style/components/checkbox.css">
+    <link rel="stylesheet" href="/style/components/button.css">
     
     <!-- PAGES -->
-    <link rel="stylesheet" href="style/pages/login.css">
-    
-
+    <link rel="stylesheet" href="/style/pages/index.css">
+    <link rel="stylesheet" href="/style/pages/loading.css">
 
     <!-- TRUMPS -->
 
     <!-- SCRIPTS -->
+    <script src="scripts/index.js"></script>
+    <script src="scripts/loading.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script>
+       const firebaseConfig = {
+            apiKey: "AIzaSyCcs2W2Sd7jAf8fqxoEab8f-JXvYpaqpdk",
+            authDomain: "webwallet-9897b.firebaseapp.com",
+            projectId: "webwallet-9897b",
+            storageBucket: "webwallet-9897b.appspot.com",
+            messagingSenderId: "74929195981",
+            appId: "1:74929195981:web:6eea7a7793845554b79284"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
 </head>
 
 <body>
-    <div class="container">
+    <div class="loading">
+        <div class="gif">
+            <img class="pig-gif" src="/assets/pig.gif">
+        </div>
+        <div class="animation-bar"></div>
+    </div>
 
+    <div class="container">
         <div class="left-container">
             <div class="logo-container">
                 <img src="assets/logo.png">
-                <h1> WebWallet</h1>
+                <h1>WebWallet</h1>
             </div>
 
             <div class="login-container">
@@ -60,18 +80,18 @@
                     <h1>Faça seu login</h1>
                 </div>
                 <p class="logo-subtitle">Entre com suas informações de cadastro.</p>
-                <form action="" method="post">
+                <form method="post">
 
                     <label for="email">E-mail</label>
                     <div class="email-input">
-                        <input type="email" id="email" placeholder="Digite o seu e-mail" required>
+                        <input oninput="validateFields()" type="email" id="email" placeholder="Digite o seu e-mail" required>
                         <div id="email-icon" class="eicon"></div>
                     </div>
-                    
+
                     <label for="senha">Senha</label>
                     <div class="password-input">
                         <div id="password-icon"></div> 
-                        <input type="password" id="password" placeholder="Digite sua senha" required> 
+                        <input type="password" oninput="validateFields()" id="password" placeholder="Digite sua senha" required> 
                         <div onclick="showHide()" id="icon"></div>
                     </div>
 
@@ -80,12 +100,12 @@
                             <input class="square" type="checkbox" id="checkbox">
                             <label class="textcheckbox" for="checkbox">Lembre-me</label>
                         </div>
-                        <a href="">Esqueci minha senha</a>
+                        <a class="forget" href="/pages/forgot/forgot.html">Esqueci minha senha</a>
                     </div>
-                    <button type="submit">ENTRAR</button>
+                    <button oninput="validateFields()" id="login-button" disabled="true" type="button" onclick="login()" >ENTRAR</button>
                     <div class="cadastro">
                         <p> Não tem uma conta?</p>
-                        <a class="bold" href="">Registre-se</a>
+                        <a class="bold" href="pages/register/register.html">Registre-se</a>
                     </div>
                 </form>
             </div>
@@ -94,9 +114,9 @@
         <div class="right-container">
             <div class="img"></div>
         </div>
+
     </div>
    
-    <script src="scripts/script.js"></script>
 </body>
 
 </html>

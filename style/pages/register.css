@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-/* Login side */
+/* Register side */
 .container > .left-container {
     display: flex;
     flex-direction: column;
@@ -61,56 +61,54 @@
     }
 }
 
-/* Container do login */
-.container > .left-container > .login-container {
+/* Container do registro */
+.container > .left-container > .register-container {
     background-color: #212121;
     width: 572px;
-    height: 562px;
+    height: 520px;
+    border-radius: 8px;
     padding: 50px 80px 50px 80px;
     box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 570px) {
-    .container > .left-container > .login-container {
+    .container > .left-container > .register-container {
         box-shadow: none;
         width: 100%;
         height: 100%;
         padding: 30px 20px 0px 20px;
     }
 }
-.container > .left-container > .login-container > .login-title img {
-    color: #FFF7DC;
-}
 
-.container > .left-container > .login-container > .login-title {
+.container > .left-container > .register-container > .register-title {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
     font-weight: 600;
     font-size: 24px;
     font-family: Poppins;
     color: #FFF7DC;
 }
 
-.container > .left-container > .login-container > .logo-subtitle {
+.container > .left-container > .register-container > .logo-subtitle {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     padding-top: 10px;
     font-size: 16px;
     font-weight: 400;
+    text-align: center;
     color: #F4FFF7;
 }
 
-.container > .left-container > .login-container > form {
+.container > .left-container > .register-container > form {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
 }
 
 /* email */
-.container > .left-container > .login-container > form > .email-input {
+.container > .left-container > .register-container > form > .email-input {
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
@@ -123,13 +121,12 @@
     font-size: 14px;
 }
 
-.container > .left-container > .login-container > form > .email-input > input{
+.container > .left-container > .register-container > form > .email-input > input{
     width: 100%;
     border-radius: 4px;
     border: 2px solid;
     border-color: #2F2F2F;
-    padding: 14px;
-    padding-left: 50px;
+    padding: 15px 14px 13px 50px;
     background-color: #2F2F2F;
     text-align: start;
     font-family: Roboto;
@@ -139,11 +136,11 @@
     transition: border-color 0.3s;
 }
 
-.container > .left-container > .login-container > form > .email-input > input:focus {
+.container > .left-container > .register-container > form > .email-input > input:focus {
     border-color: #41A55B;
 }
 
-.container > .left-container > .login-container > form > .email-input > #email-icon {
+.container > .left-container > .register-container > form > .email-input > #email-icon {
     background: url('/assets/mail.svg');
     width: 24px;
     margin-left: 14px;
@@ -155,7 +152,7 @@
 }
 
 /* password */
-.container > .left-container > .login-container > form > .password-input {
+.container > .left-container > .register-container > form > .password-input {
     display: flex;
     align-items: center;
     width: 100%;
@@ -169,12 +166,12 @@
     position: relative; 
 }
 
-.container > .left-container > .login-container > form > .password-input > input {
+.container > .left-container > .register-container > form > .password-input > input {
     width: 100%;
     border: 2px solid; 
     border-color: #2F2F2F;
     border-radius: 4px;
-    padding: 14px 0px 14px 50px;
+    padding: 15px 14px 13px 50px;
     background-color: #2F2F2F;
     text-align: start;
     font-family: Roboto;
@@ -184,12 +181,12 @@
     transition: border-color 0.3s;
 }
 
-.container > .left-container > .login-container > form > .password-input > input:focus {
+.container > .left-container > .register-container > form > .password-input > input:focus {
     border-color: #41A55B;
 }
 
-.container > .left-container > .login-container > form > .password-input > #password-icon,
-.container > .left-container > .login-container > form > .password-input > #icon {
+.container > .left-container > .register-container > form > .password-input > #password-icon,
+.container > .left-container > .register-container > form > .password-input > #icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -198,90 +195,13 @@
     height: 24px;
 }
 
-.container > .left-container > .login-container > form > .password-input > #password-icon {
+.container > .left-container > .register-container > form > .password-input > #password-icon {
     background: url('/assets/lock.svg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 24px;
     left: 14px;
 }
-
-#icon {
-    color: #B0B0B0;
-    background: url('/assets/olhosenha.png');
-    width: 24px;
-    right: 14px;
-    padding-left: 24px;
-    cursor: pointer;
-    font-size: 17px;
-}
-
-#icon.hide {
-    background: url(/assets/olhonaovisivel.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
-}
-
-/* checkbox */
-.container > .left-container > .login-container > form > .checkbox-and-forget {
-    margin-bottom: 17px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container > .left-container > .login-container > form > .checkbox-and-forget > a {
-    color: #41A55B;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: Poppins;
-    font-size: 14px;
-    transition: color 0.5s;
-}
-
-.container > .left-container > .login-container > form > .checkbox-and-forget > a:hover {
-    color: #2b8442;
-}
-
-.container > .left-container > .login-container > form > .checkbox-and-forget > .lembrarme {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    color: #F4FFF7;
-    font-weight: 400;
-    font-size: 16px;
-}
-
-.container > .left-container > .login-container > form > .checkbox-and-forget > .lembrarme > label {
-    cursor: pointer;
-}
-
-/* cadastro */
-.container > .left-container > .login-container > form > .cadastro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-}
-
-.container > .left-container > .login-container > form > .cadastro > p,a {
-    color: #41A55B;
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.5s;
-}
-
-.container > .left-container > .login-container > form > .cadastro > a:hover {
-    color: #2b8442;
-}
-
-.container > .left-container > .login-container > form > .cadastro > a.bold {
-    font-weight: 600
-}
-
 
 /* Imagem */
 .container > .right-container {
@@ -298,7 +218,7 @@
 .container > .right-container > .img {
     width: 100%;
     height: 100%;
-    background-image: url(/assets/loginimage.jpg);
+    background-image: url(/assets/emil-kalibradov-a4maTFz1QPc-unsplash.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -308,4 +228,3 @@
         display: none;
     }
 }
-

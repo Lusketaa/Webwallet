@@ -4,3 +4,17 @@
     color: #FFF7DC;
     padding-bottom: 12px;
 }
+
+.container > .left-container > .register-container > form > label {
+    font-family: Poppins;
+    font-weight: 500;
+    color: #FFF7DC;
+    padding-bottom: 12px;
+}
+
+.container > .left-container > .forgot-container > form > label {
+    font-family: Poppins;
+    font-weight: 500;
+    color: #FFF7DC;
+    padding-bottom: 12px;
+}

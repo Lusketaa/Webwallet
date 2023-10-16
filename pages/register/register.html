@@ -1,0 +1,93 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar - WebWallet</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Poppins:wght@500;600;700&family=Roboto:wght@400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- STYLES ITCSS -->
+
+    <!-- SETTINGS -->
+    <link rel="stylesheet" href="/style/settings/color.css">
+    <link rel="stylesheet" href="/style/settings/text.css">
+
+    <!-- GENERIC -->
+    <link rel="stylesheet" href="/style/generic/reset.css"> 
+    <link rel="stylesheet" href="/style/generic/box-sizing.css">
+
+    <!-- BASE -->
+    <link rel="stylesheet" href="/style/base/html.css">
+
+    <!-- OBJECTS -->
+
+    <!-- COMPONENTS -->
+    <link rel="stylesheet" href="/style/components/label.css">
+    <link rel="stylesheet" href="/style/components/checkbox.css">
+    <link rel="stylesheet" href="/style/components/button.css">
+    
+    <!-- PAGES -->
+    <link rel="stylesheet" href="/style/pages/register.css">
+
+    <!-- TRUMPS -->
+
+    <!-- SCRIPTS -->
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="left-container">
+            <div class="logo-container">
+                <img src="/assets/logo.png">
+                <h1>WebWallet</h1>
+            </div>
+
+            <div class="register-container">
+                <div class="register-title">
+                    <h1>Cadastre-se</h1>
+                </div>
+                <p class="logo-subtitle">Preencha os campos abaixo para se registrar.</p>
+                <form onsubmit="return validarFormulario()" method="post">
+
+                    <label for="email">E-mail</label>
+                    <div class="email-input">
+                        <input type="email" id="email" placeholder="Cadaste o seu e-mail" required>
+                        <div id="email-icon" class="eicon"></div>
+                    </div>
+                    
+                    <label for="senha">Senha</label>
+                    <div class="password-input">
+                        <div id="password-icon"></div> 
+                        <input type="password" name="senha" id="senha" placeholder="Cadastre a sua senha" required> 
+                    </div>
+
+                    <label for="rep-senha">Repita a sua senha</label>
+                    <div class="password-input">
+                        <div id="password-icon"></div> 
+                        <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Repita a sua senha" required> 
+                    </div>
+
+                    <button onclick="cadastrar()" type="submit" value="Enviar">CADASTRAR</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="img"></div>
+        </div>
+    </div>
+   
+    <script src="scripts/register.js"></script>
+</body>
+
+</html>
