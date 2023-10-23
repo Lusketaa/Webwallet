@@ -110,7 +110,12 @@ main > .resume {
   flex-wrap: wrap;
 }
 
-
+@media (max-width: 480px) {
+  .resume {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .resume > div {
   display: flex;
