@@ -3,12 +3,7 @@ html{
     font-weight: 600;
     letter-spacing: 1px;
     scroll-behavior: smooth;
-    background-color: #1A1919;
 }
 
-@media (max-width: 570px) {
-    html{
-        background-color: #212121;
-    } 
-}
+
 

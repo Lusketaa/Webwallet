@@ -1,28 +1,42 @@
 .container {
-    display: none;
+    display: flex;
     height: 100vh;
     width: 100%;
+    background-color: #1A1919;
+}
+
+@media (max-width: 570px) {
+    .container{
+        background-color: #212121;
+    } 
 }
 
 /* Login side */
 .container > .left-container {
     display: flex;
     flex-direction: column;
-    gap: 126px;
+    gap: 50px;
     align-items: center;
     width: 50%;
-}
-
-@media (max-width: 1200px) {
-    .container > .left-container {
-        width: 100%;
-    }
 }
 
 @media (max-width: 480px) {
     .container > .left-container {
         max-width: 480px;
         gap: 0px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container > .left-container {
+        width: 100%;
+
+    }
+}
+
+@media (min-width: 1800px) {
+    .container > .left-container {
+        gap: 126px;
     }
 }
 
@@ -109,7 +123,6 @@
     display: flex;
     flex-direction: column;
     padding-top: 25px;
-    height: 100%;
 }
 
 /* email */
@@ -219,7 +232,7 @@
 }
 
 #icon.hide {
-    background: url(/assets/olhonaovisivel.png);
+    background: url('/assets/olhonaovisivel.png');
     background-size: cover;
     background-repeat: no-repeat;
     width: 24px;

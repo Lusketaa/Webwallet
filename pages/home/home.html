@@ -1,55 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home - WebWallet</title>
 
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Poppins:wght@500;600;700&family=Roboto:wght@400;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&family=Poppins:wght@500;600;700&family=Roboto:wght@400;700&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="/assets/dollar.png" type="image/png">
     <!-- STYLES ITCSS -->
 
     <!-- SETTINGS -->
-    <link rel="stylesheet" href="/style/settings/color.css">
-    <link rel="stylesheet" href="/style/settings/text.css">
+    <link rel="stylesheet" href="/style/settings/color.css" />
+    <link rel="stylesheet" href="/style/settings/text.css" />
 
     <!-- GENERIC -->
-    <link rel="stylesheet" href="/style/generic/reset.css"> 
-    <link rel="stylesheet" href="/style/generic/box-sizing.css">
+    <link rel="stylesheet" href="/style/generic/reset.css" />
+    <link rel="stylesheet" href="/style/generic/box-sizing.css" />
 
     <!-- BASE -->
-    <link rel="stylesheet" href="/style/base/html.css">
+    <link rel="stylesheet" href="/style/base/html.css" />
 
     <!-- OBJECTS -->
 
     <!-- COMPONENTS -->
-    <link rel="stylesheet" href="/style/components/label.css">
-    <link rel="stylesheet" href="/style/components/checkbox.css">
-    <link rel="stylesheet" href="/style/components/button.css">
-    
+    <link rel="stylesheet" href="/style/components/label.css" />
+    <link rel="stylesheet" href="/style/components/checkbox.css" />
+
     <!-- PAGES -->
-    <link rel="stylesheet" href="/style/pages/home.css">
+    <link rel="stylesheet" href="/style/pages/home.css" />
 
     <!-- TRUMPS -->
 
     <!-- SCRIPTS -->
     <script src="/scripts/loading.js"></script>
-
-</head>
-<body>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore-compat.js"></script>
+    <script src="/scripts/firebase-init.js"></script>
+    <script src="/scripts/home.js"></script>
+    <script src="/scripts/auth-guard.js"></script>
+  </head>
+  <body>
     <div class="loading">
-        <div class="gif">
-            <img class="pig-gif" src="/assets/pig.gif">
-        </div>
-        <div class="animation-bar"></div>
+      <div class="gif">
+        <img class="pig-gif" src="/assets/pig.gif" />
+      </div>
+      <div class="animation-bar"></div>
     </div>
     <div class="container">
-        Cu
+      <header class="header">
+        <button class="exit" type="button" onclick="logout()">
+          <img src="/assets/right-from-bracket-solid.svg" />
+        </button>
+      </header>
+      <main>
+        <div class="resume">
+          <div class="entradas">
+            Entradas: R$
+            <span class="incomes">0.00</span>
+          </div>
+          <div class="saídas">
+            Saídas: R$
+            <span class="expenses">0.00</span>
+          </div>
+          <div class="total">
+            Total: R$
+            <span class="totall">0.00</span>
+          </div>
+        </div>
+        <div class="newItem">
+          <div class="divDesc">
+            <label for="desc">Descrição</label>
+            <input type="text" id="desc" />
+          </div>
+          <div class="divAmount">
+            <label for="amount">Valor</label>
+            <input type="number" id="amount" />
+          </div>
+          <div class="divType">
+            <label for="type">Tipo</label>
+            <select id="type">
+              <option>Entrada</option>
+              <option>Saída</option>
+            </select>
+          </div>
+          <button id="btnNew" onclick="adicionar()">Incluir</button>
+        </div>
+        <div class="divTable">
+          <table>
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th class="columnAmount">Valor</th>
+                <th class="columnType">Tipo</th>
+                <th class="columnAction"></th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </main>
     </div>
-    
-</body>
+  </body>
 </html>
