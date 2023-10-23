@@ -1,4 +1,4 @@
-alert("Seja bem-vindo a WebWallet versão 1.0, caso não queira se cadastrar em nossa aplicação, pode utilizar as credenciais abaixo para critério de teste: Email: teste@hotmail.com Senha: 123456");
+//alert("Seja bem-vindo a WebWallet versão 1.0, caso não queira se cadastrar em nossa aplicação, pode utilizar as credenciais abaixo para critério de teste: Email: teste@hotmail.com Senha: 123456");
 
 firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
