@@ -102,6 +102,13 @@ main > .resume {
   gap: 50px;
 }
 
+@media (max-width: 480px) {
+  main > .resume {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .resume {
   display: flex;
   padding: 10px 0;
@@ -110,12 +117,7 @@ main > .resume {
   flex-wrap: wrap;
 }
 
-@media (max-width: 480px) {
-  .resume {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+
 
 .resume > div {
   display: flex;
