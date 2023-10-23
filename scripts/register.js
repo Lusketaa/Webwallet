@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (password !== confirmPassword) {
       alert("As senhas não coincidem");
     } else {
-      // Os dados estão corretos, você pode enviar o formulário ou executar outra ação aqui
       registrationForm.reset();
     }
   });

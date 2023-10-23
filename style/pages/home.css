@@ -110,6 +110,8 @@ main > .resume {
   flex-wrap: wrap;
 }
 
+
+
 .resume > div {
   display: flex;
   flex-direction: column;
@@ -144,12 +146,27 @@ main > .resume {
   flex-wrap: wrap;
 }
 
+@media (max-width: 480px) {
+  .newItem {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .divDesc,
 .divType,
 .divAmount {
   gap: 15px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .divDesc,
+  .divType,
+  .divAmount {
+    text-align: center;
+  }
 }
 
 .newItem > button {
